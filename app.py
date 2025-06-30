@@ -61,7 +61,7 @@ if page == "Standup Notes":
             st.markdown("### 🎉 **Achievements**")
             achievements = get_column_value(fellow, ['What have you achieved since the last stand up?', 'Achievements'])
             if achievements != "N/A":
-                st.markdown(f"📝 {achievements}")
+                st.markdown(f"{achievements}")
             else:
                 st.info("No achievements recorded")
             
@@ -71,9 +71,9 @@ if page == "Standup Notes":
             st.markdown("### 🚧 **Current Blockers**")
             blockers = get_column_value(fellow, ['What blockers are you currently encountering?', 'Blockers', 'Current blockers'])
             if blockers != "N/A":
-                st.markdown(f"⚠️ {blockers}")
+                st.markdown(f"{blockers}")
             else:
-                st.success("No blockers - smooth sailing! ⛵")
+                st.success("No blockers - smooth sailing!")
             
             st.markdown("")  # Add spacing
             
@@ -86,7 +86,7 @@ if page == "Standup Notes":
                 'Next priorities'
             ])
             if priorities != "N/A":
-                st.markdown(f"🔸 {priorities}")
+                st.markdown(f"{priorities}")
             else:
                 st.warning("No priorities set")
             
@@ -103,7 +103,7 @@ if page == "Standup Notes":
                     'Progress'
                 ])
                 if progress != "N/A":
-                    st.markdown(f"📊 {progress}")
+                    st.markdown(f"{progress}")
                 else:
                     st.info("No progress update")
             
@@ -111,7 +111,7 @@ if page == "Standup Notes":
                 st.markdown("### 👏 **Shoutouts**")
                 shoutouts = get_column_value(fellow, ['Shoutouts', 'Shout-outs'])
                 if shoutouts != "N/A":
-                    st.markdown(f"💖 {shoutouts}")
+                    st.markdown(f"{shoutouts}")
                 else:
                     st.info("No shoutouts")
                 
@@ -185,7 +185,7 @@ elif page == "Retrospectives":
             st.markdown("### 🏆 **What did you achieve this week?**")
             achievements = get_column_value_retro(fellow, ['What did you achieve this week?', 'Achievements'])
             if achievements != "N/A":
-                st.markdown(f"🎯 {achievements}")
+                st.markdown(f"{achievements}")
             else:
                 st.info("No achievements recorded")
             
@@ -195,7 +195,7 @@ elif page == "Retrospectives":
             st.markdown("### ✅ **What went well this week?**")
             went_well = get_column_value_retro(fellow, ['What went well this week past week?', 'What went well this week?', 'Went well'])
             if went_well != "N/A":
-                st.markdown(f"😊 {went_well}")
+                st.markdown(f"{went_well}")
             else:
                 st.info("No highlights recorded")
             
@@ -205,7 +205,7 @@ elif page == "Retrospectives":
             st.markdown("### 🔄 **What could've gone better?**")
             could_improve = get_column_value_retro(fellow, ['What could\'ve gone better this past week?', 'What could have gone better?', 'Improvements'])
             if could_improve != "N/A":
-                st.markdown(f"💡 {could_improve}")
+                st.markdown(f"{could_improve}")
             else:
                 st.success("Everything went smoothly!")
             
@@ -218,7 +218,7 @@ elif page == "Retrospectives":
                 st.markdown("### 📚 **What have you learned?**")
                 learning = get_column_value_retro(fellow, ['What have you learned this week?', 'Learning', 'Learnings'])
                 if learning != "N/A":
-                    st.markdown(f"🧠 {learning}")
+                    st.markdown(f"{learning}")
                 else:
                     st.info("No learning notes")
             
@@ -226,9 +226,9 @@ elif page == "Retrospectives":
                 st.markdown("### 🤔 **What still puzzles you?**")
                 puzzles = get_column_value_retro(fellow, ['What still puzzles you?', 'Puzzles', 'Questions'])
                 if puzzles != "N/A":
-                    st.markdown(f"❓ {puzzles}")
+                    st.markdown(f"{puzzles}")
                 else:
-                    st.success("No puzzles - all clear! 🎉")
+                    st.success("No puzzles - all clear!")
                 
         col1, col2, col3 = st.columns([1,6,1])
         
